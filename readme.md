@@ -210,8 +210,9 @@ The harness is OpenAI-compatible, so any served checkpoint can be evaluated.
 
 ## Acknowledgments and licenses
 
-This project derives from the following open-source projects; each subtree
-keeps its original license:
+The SWE-OPD implementation in this repository is released under the
+[MIT License](LICENSE); it derives from the following open-source projects,
+each of which keeps its original license:
 
 - [THUDM/slime](https://github.com/THUDM/slime) (Apache-2.0)
 - [sgl-project/sglang](https://github.com/sgl-project/sglang) (Apache-2.0)
