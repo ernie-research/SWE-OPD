@@ -1,0 +1,19 @@
+# Python environment and caches
+.venv/
+.slime_venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Runtime outputs
+wandb/
+/logs/
+core.[0-9]*
+*.log
+
+# Local credentials and agent settings
+.secret/
+.env
+/.claude/
+.comate/

@@ -1,0 +1,17 @@
+{
+  "apiKeyHelper": "~/.claude/anthropic_key.sh",
+  "env": {
+    "ANTHROPIC_BASE_URL": "xxx",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": 1,
+    "ANTHROPIC_MODEL": "claude-sonnet-4-5-20250929",
+    "ANTHROPIC_SMALL_FAST_MODEL": "claude-haiku-4-5-20251001-v1:0",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-5-20250929",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-sonnet-4-5-20250929",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-haiku-4-5-20251001-v1:0",
+    "CLAUDE_THINKING_ENABLED": "true",
+    "CLAUDE_THINKING_BUDGET_TOKENS": "10000"
+  },
+  "maxRetries": 8,
+  "retryDelayMs": 10000,
+  "alwaysThinkingEnabled": true
+}

@@ -1,0 +1,33 @@
+# Build artifacts (rebuilt by setup.sh, not part of the deliverable)
+slime-venv/
+cuda-12.9-shim/
+
+# Python environment and caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.venv/
+.slime_venv/
+
+# Build logs / runtime outputs
+env/example/*.log
+env/example/redist/
+env/example/serve/
+wandb/
+/logs/
+core.[0-9]*
+*.log
+traj/
+
+# Local credentials and agent settings
+.secret/
+.key.sh
+.env
+/.claude/
+/.comate/
+/.agents/
+
+# macOS junk
+.DS_Store

@@ -1,0 +1,41 @@
+system_prompt: |-
+  You are a programming agent tasked to resolve GitHub issues in a repository.
+
+  <use_parallel_tool_calls>
+  For maximum efficiency, whenever you perform multiple independent operations, invoke all relevant tools simultaneously rather than sequentially. Prioritize calling tools in parallel whenever possible. For example, when reading 3 files, run 3 tool calls in parallel to read all 3 files into context at the same time. When running multiple read-only commands like `ls` or `list_dir`, always run all of the commands in parallel. Err on the side of maximizing parallel tool calls rather than running too many tools sequentially.
+  </use_parallel_tool_calls>
+
+instance_prompt: |-
+  I have uploaded a python code repository in the /testbed directory.
+
+  <github_issue>
+  {problem_statement}
+  </github_issue>
+
+  Your task is to fix the <github_issue> by making minimal changes to non-test files.
+  I've already handled any test file changes mentioned in the issue - do NOT modify tests.
+
+  Steps:
+  1. Explore the codebase to understand the relevant code and expected behavior.
+  2. Create '/testbed/reproduce_issue.py' to reproduce and verify the fix.
+  3. Analyze root cause, consider multiple approaches, choose the best one.
+  4. Implement minimal, targeted changes.
+  5. Verify fix with your reproduction script.
+  6. Run relevant unit tests to check for regressions (e.g., pytest -xvs path/to/test.py).
+  7. Create '/testbed/edge_case_tests.py' to test edge cases beyond the original issue.
+  
+  A successful resolution means:
+  - The specific error/issue no longer occurs
+  - Changes maintain compatibility with existing functionality
+  - Edge cases are properly handled
+
+  Leverage parallel tool calls to maximize efficiency and explore multiple aspects simultaneously.
+  Each tool call has some cost, but parallel execution can significantly improve overall efficiency. Where possible, combine multiple actions into parallel function calls (e.g., multiple file reads, parallel searches, or combined bash commands).
+
+command_files: []  # Not needed - Claude Code manages tools internally
+llm_name: "claude-sonnet-4-5-20250929"
+demo_file: null
+use_demo: false
+other_args:
+  max_retries: 3
+  timeout: 300

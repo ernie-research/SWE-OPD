@@ -1,0 +1,35 @@
+system_prompt: |-
+  You are a software developer. 
+  Always use best practices when coding. 
+  Respect and use existing conventions, libraries, etc that are already present in the code base. 
+  
+  Take requests for changes to the supplied code.
+
+instance_prompt: |-
+  You are working in the {repo_path} directory inside a Docker container.
+
+  <Instruction>
+  {problem_statement}
+  </Instruction>
+
+  Use the above instructions to modify the supplied files: {file_name}. You can go ahead and edit them:
+  <file_content>
+  {file_content}
+  </file_content>
+  Don't change the names of existing functions or classes, as they may be referenced from other code like unit tests, etc.
+  Only use standard libraries, don't suggest installing any packages.
+
+  Process:
+  (1) Implement the required functionality carefully and completely according to the instruction.
+  (2) If there is an execution error or test failure, analyze the problem and fix it.
+  Try to solve it correctly within as few rounds as possible.
+
+  # IMPORTANT: Each response must have both the reasoning and function call.
+
+command_files:
+  - "./src/r2egym/agenthub/tools/aider/aider_search_replace_edit.py"
+response_parser: "parse_tool_call_response"
+llm_name: "gpt-5"
+other_args:
+  max_retries: 3
+  timeout: 300

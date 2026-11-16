@@ -1,0 +1,14 @@
+# Reproducible source checkouts for vanilla_opd.
+# Credentials and repository contents are intentionally not included here.
+#
+# The URL column records the INTERNAL origin of each tree (personal-code repo
+# on the corporate Git). The authoritative facts are the branch + commit: clone
+# the same commit from wherever the tree is mirrored (e.g. the sibling
+# offline_opd package, which ships the sglang / Megatron-LM snapshots).
+#
+# slime / sglang / Megatron-LM trees are ALSO shipped as snapshots inside the
+# swe-opd release bundle: slime in this directory, sglang + Megatron-LM in
+# ../offline_opd (reused, not duplicated -- see README.md "Reuse").
+slime	<internal-git>/baidu/personal-code/slime_opd	release-v0.1	4b45ca146dbcc35db992104f4fb3d2bae59d502c
+sglang	<internal-git>/baidu/personal-code/sglang_opd	offline_opd	0e33d68d3f68bad64e1363926f3a0cfd443c016d
+Megatron-LM	<internal-git>/baidu/personal-code/Megatron-LM_opd	offline_opd	0c5d1c445da0ed1916c3c6c144bf0188fcf5033e

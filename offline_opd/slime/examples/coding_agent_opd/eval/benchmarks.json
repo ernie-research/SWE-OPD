@@ -1,0 +1,20 @@
+{
+  "swebench": {
+    "file": "data/swebench-latest.jsonl",
+    "display_name": "SWE-bench Verified (500)",
+    "swe_types": ["swebench"],
+    "checks": ["required_fields", "spec_coverage"]
+  },
+  "swebench-pro": {
+    "file": "data/swe-bench-pro-rebuilt_eval.jsonl",
+    "display_name": "SWE-bench Pro (731)",
+    "swe_types": ["swebench-pro"],
+    "checks": ["required_fields", "run_scripts"]
+  },
+  "multilingual": {
+    "file": "data/swebench-multilingual-latest_eval.jsonl",
+    "display_name": "SWE-bench Multilingual (300)",
+    "swe_types": ["swe_bench_multilingual"],
+    "checks": ["required_fields", "spec_coverage"]
+  }
+}
