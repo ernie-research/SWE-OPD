@@ -2,7 +2,7 @@
 
 This repository is the reference implementation behind the paper
 *SWE-OPD: On-Policy Distillation for Agentic Coding*. It
-reproduces a minimal, controlled study of **on-policy distillation (OPD)** for
+conducts a minimal, controlled study of **on-policy distillation (OPD)** for
 software-engineering (SWE) coding agents: a *small student* model interacts
 with executable repositories, and a *larger teacher* supervises the prefixes
 that the student itself visits — no reinforcement learning, no filtering by
