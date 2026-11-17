@@ -208,6 +208,22 @@ The harness is OpenAI-compatible, so any served checkpoint can be evaluated.
   `T=1.0`, `top-p=0.95` at evaluation, ≤100 (Verified) / ≤150 (Pro,
   Multilingual) steps.
 
+## Citation
+
+If you find our paper or this repository useful, please consider citing:
+
+```bibtex
+@misc{he2026sweopdonpolicydistillationagentic,
+      title={SWE-OPD: On-Policy Distillation for Agentic Coding}, 
+      author={Yuhang He and Yanyu Chen and Chuanzhe Guo and Jie Zhu and Zichen Tian and Hongyu Ge and Zixuan Ren and Huang He and Bingjin Chen and Junyuan Shang and Shuohuan Wang and Yongqi Zhang and Irwin King and Jing Liu},
+      year={2026},
+      eprint={2611.21020},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2611.21020}, 
+}
+```
+
 ## Acknowledgments and licenses
 
 The SWE-OPD implementation in this repository is released under the
@@ -218,3 +234,4 @@ each of which keeps its original license:
 - [sgl-project/sglang](https://github.com/sgl-project/sglang) (Apache-2.0)
 - [NVIDIA/Megatron-LM](https://github.com/NVIDIA/Megatron-LM)
 - [R2E-Gym](https://r2e-gym.github.io/) (agent backend and evaluation protocol, vendored under `3rdparty/`)
+
