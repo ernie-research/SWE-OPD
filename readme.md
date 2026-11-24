@@ -1,5 +1,7 @@
 # SWE-OPD: On-Policy Distillation for Agentic Coding
 
+https://img.shields.io/badge/arXiv-2611.21020-b31b1b.svg
+
 This repository is the reference implementation behind the paper
 *SWE-OPD: On-Policy Distillation for Agentic Coding*. It
 conducts a minimal, controlled study of **on-policy distillation (OPD)** for
